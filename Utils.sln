@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33103.201
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{B52D052A-F234-4001-B028-0FE02C934C60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlSugerLib", "SqlSugerLib\SqlSugerLib.csproj", "{998AF57B-83C7-4600-986B-05F8DEF48965}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B52D052A-F234-4001-B028-0FE02C934C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B52D052A-F234-4001-B028-0FE02C934C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B52D052A-F234-4001-B028-0FE02C934C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998AF57B-83C7-4600-986B-05F8DEF48965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998AF57B-83C7-4600-986B-05F8DEF48965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998AF57B-83C7-4600-986B-05F8DEF48965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998AF57B-83C7-4600-986B-05F8DEF48965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
