@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,11 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Common Model\PagedInfo.cs" />
-    <Compile Include="Common Model\PagerInfo.cs" />
-    <Compile Include="SqlSugarHelper.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Tools\Config.cs" />
+    <Compile Include="DBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +55,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Solution Item\" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Solution Item\DBContext.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
