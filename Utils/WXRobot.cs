@@ -18,18 +18,29 @@ namespace Utils
         /// <param name="phoneArr">需要被@的人的手机号列表,所有人="@all"</param>
         /// <returns>接口调用结果 示例:{"errcode":0,"errmsg":"ok"}</returns>
         public static async Task<string> SendMsg(string robotAddress, string msg, params string[] phoneArr) {
-            var requestObj = new { msgtype = "text", text = new { content = msg, mentioned_mobile_list = phoneArr } };
-            return await PostAsyncJson(robotAddress, JsonConvert.SerializeObject(requestObj));
+            try {
+                var requestObj = new { msgtype = "text", text = new { content = msg, mentioned_mobile_list = phoneArr } };
+                return await PostAsyncJson(robotAddress, JsonConvert.SerializeObject(requestObj));
+            }
+            catch (System.Exception) {
+                throw;
+            }
         }
 
         private static async Task<string> PostAsyncJson(string url, string json) {
-            HttpClient client = new HttpClient();
-            HttpContent content = new StringContent(json);
-            content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            HttpResponseMessage response = await client.PostAsync(url, content);
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
-            return responseBody;
+            try {
+                HttpClient client = new HttpClient();
+                HttpContent content = new StringContent(json);
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = await client.PostAsync(url, content);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
+            }
+            catch (System.Exception) {
+                throw;
+            }
+
         }
     }
 }

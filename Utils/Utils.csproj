@@ -55,6 +55,7 @@
     <Compile Include="LogUtil.cs" />
     <Compile Include="MsgCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeRangeConvert.cs" />
     <Compile Include="UnicodeUtil.cs" />
     <Compile Include="WXRobot.cs" />
   </ItemGroup>
