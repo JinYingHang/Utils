@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Utils.Forms
@@ -37,9 +30,6 @@ namespace Utils.Forms
                 return _instance;
             }
         }
-
-
-
 
         public void WriteLog(string msg, string level = "INFO") {
             try {
@@ -78,6 +68,10 @@ namespace Utils.Forms
             catch (Exception) {
                 throw;
             }
+        }
+
+        public void Clear() {
+            _richTextBox.Clear();
         }
     }
 }
