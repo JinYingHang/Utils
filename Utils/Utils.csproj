@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClient.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DateTableHelp.cs" />
     <Compile Include="Forms\BlackLogForm.cs">
@@ -55,6 +56,7 @@
     <Compile Include="LogUtil.cs" />
     <Compile Include="MsgCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSAUtil_PKCS.cs" />
     <Compile Include="ScriptUtil.cs" />
     <Compile Include="TimeRangeConvert.cs" />
     <Compile Include="UnicodeUtil.cs" />
