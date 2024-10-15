@@ -27,6 +27,22 @@ namespace Utils
             }
         }
 
+        /// <summary>
+        ///企业微信-智能机器人消息推送
+        /// </summary>
+        /// <param name="robotAddress">机器人地址，在对应的企业微信群复制</param>
+        /// <param name="msg">要通知的消息</param>
+        /// <returns>接口调用结果 示例:{"errcode":0,"errmsg":"ok"}</returns>
+        public static async Task<string> SendMsgMarkDown(string robotAddress, string msg) {
+            try {
+                var requestObj = new { msgtype = "markdown", markdown = new { content = msg } };
+                return await PostAsyncJson(robotAddress, JsonConvert.SerializeObject(requestObj));
+            }
+            catch (System.Exception) {
+                throw;
+            }
+        }
+
         private static async Task<string> PostAsyncJson(string url, string json) {
             try {
                 HttpClient client = new HttpClient();
